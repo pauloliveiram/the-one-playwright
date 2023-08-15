@@ -1,0 +1,18 @@
+{
+  "name": "the-one-playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean:folders": "rm -R -f allure-report/* && rm -R -f allure-results/*",
+    "allure-report": "allure generate allure-results -o allure-report --clean && allure open allure-report",
+    "tests": "playwright test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.37.0",
+    "allure-playwright": "^2.5.0",
+    "dotenv": "^16.3.1"
+  }
+}
