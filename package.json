@@ -12,7 +12,10 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.37.0",
+    "@typescript-eslint/parser": "^6.4.0",
     "allure-playwright": "^2.5.0",
-    "dotenv": "^16.3.1"
+    "dotenv": "^16.3.1",
+    "eslint-plugin-playwright": "^0.15.3",
+    "prettier": "3.0.2"
   }
 }

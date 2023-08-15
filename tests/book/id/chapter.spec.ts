@@ -1,7 +1,9 @@
 import { test, expect } from "@playwright/test";
 
 test("Validar a resposta do GET de /book/{id}/chapter", async ({ request }) => {
-  const response = await request.get("/v2/book/5cf5805fb53e011a64671582/chapter");
+  const response = await request.get(
+    "/v2/book/5cf5805fb53e011a64671582/chapter",
+  );
   const responseBody = await response.json();
 
   expect(response.status()).toBe(200);

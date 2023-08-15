@@ -1,7 +1,9 @@
 import { test, expect } from "@playwright/test";
 
 test("Validar a resposta do GET de /movie/{id}/quote", async ({ request }) => {
-  const response = await request.get("/v2/movie/5cd95395de30eff6ebccde5b/quote");
+  const response = await request.get(
+    "/v2/movie/5cd95395de30eff6ebccde5b/quote",
+  );
   const responseBody = await response.json();
 
   expect(response.status()).toBe(200);
