@@ -2,29 +2,34 @@
 
 ## Sobre o projeto
 
-Essa é uma aplicação de testes automatizados na API do TMDB (The Movie DataBase), que é uma base de dados com informações sobre diversos filmes e séries de TV. Os testes foram aplicados em alguns endpoints da API, cujos resultados são disponibilizados em relatório gerado pelo Allure. 
+Essa é uma aplicação de testes automatizados em uma API com informações sobre a saga de livros e filmes "O Senhor dos Aneis". Os testes foram aplicados em todos os endpoints da API, cujos resultados são disponibilizados em relatório gerado pelo Allure. 
 
 Além disso, foi desenvolvida uma pipeline no Github Actions para que os testes sejam executados e o relatórios sejam gerados a cada push ou pull request na branch main do repositório.
 
 ## Link da API
-https://developer.themoviedb.org/docs
+https://the-one-api.dev/
 
 ## Tecnologias utilizadas
 
-- Playwright
+- Cypress
 - Allure Report
 - Github Actions
 
 ## Endpoints com testes automatizados
 
-
-- [POST] Adicionar filme em uma lista específica (/list/{list_id}/add_item)
-- [POST] Criar uma lista (/list)
-- [POST] Limpar uma lista específica (/list/{list_id}/clear)
-- [POST] Remover filme de uma lista específica (/list/{list_id}/remove_item)
-- [GET] Ver detalhes de uma lista específica (/list/{list_id})
-- [GET] Listar todas as listas de filmes do usuário (/account/{account_id}/lists)
-- [DELETE] Excluir uma lista específica (/list/{list_id})
+- [GET] Listar todos os livros (/book)
+- [GET] Obter um livro específico (/book/{id})
+- [GET] Listar os capítulos de um livro específico (/book/{id}/chapter)
+- [GET] Listar todos os filmes (/movie)
+- [GET] Obter um filme específico (/movie/{id})
+- [GET] Listar citações de um filme específico (/movie/{id}/quote)
+- [GET] Listar todos os personagens (/character)
+- [GET] Obter um personagem específico (/character/{id})
+- [GET] Listar citações de um personagem específico (/character/{id}/quote)
+- [GET] Listar todas as citações de filmes (/quote)
+- [GET] Obter uma citação de filme específica (/quote/{id})
+- [GET] Listar todos os capítulos de livros (/chapter)
+- [GET] Obter um capítulo de livro específico (/chapter/{id})
 
 ## Relatório gerado
 ![image](https://github.com/pauloliveiram/the-one-playwright/assets/39312072/64d6d97b-3fa9-47df-a9b4-2eef7e86a33e)
@@ -33,8 +38,8 @@ https://developer.themoviedb.org/docs
 
 ### Pré-requisitos
 
-- Node.js 16+
-- Após clonar o repositório, é necessário gerar um token de autenticação no site da API, criar um arquivo .env e adicionar uma variável chamada "AUTH_TOKEN". Exemplo: AUTH_TOKEN=TOKEN_GERADO
+- Node instalado na máquina
+- Java 8 instalado na máquina (Necessário para executar o binário allure)
 
 ```bash
 
